@@ -6,11 +6,11 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>拼命三郎的博客</title>
+  <title>Tag: python, oracle | 拼命三郎的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:type" content="website">
 <meta property="og:title" content="拼命三郎的博客">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="http://yoursite.com/tags/python-oracle/index.html">
 <meta property="og:site_name" content="拼命三郎的博客">
 <meta property="og:locale" content="default">
 <meta name="twitter:card" content="summary">
@@ -152,46 +152,34 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-python3连接oracle数据库" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
+  
     
-      <header class="article-header">
-        
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2019" class="archive-year">2019</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2019/06/29/python3连接oracle数据库/" class="archive-article-date">
+  	<time datetime="2019-06-29T05:15:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-29</time>
+</a>
+        </div>
+    	 
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/06/29/python3连接oracle数据库/">python3连接oracle数据库</a>
+      <a class="archive-article-title" href="/2019/06/29/python3连接oracle数据库/">python3连接oracle数据库</a>
     </h1>
   
 
-        
-        <a href="/2019/06/29/python3连接oracle数据库/" class="archive-article-date">
-  	<time datetime="2019-06-29T05:15:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-29</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="声明：python，cx-Oracle和instantclient的版本应一致"><a href="#声明：python，cx-Oracle和instantclient的版本应一致" class="headerlink" title="声明：python，cx_Oracle和instantclient的版本应一致"></a><em>声明：python，cx_Oracle和instantclient的版本应一致</em></h4><h4 id="我这里使用的版本是python3-6-64位-cx-Oracle-5-3-11g-win-amd64-py3-6-2和instantclient-basic-windows-x64-18-5-0-0-0dbru"><a href="#我这里使用的版本是python3-6-64位-cx-Oracle-5-3-11g-win-amd64-py3-6-2和instantclient-basic-windows-x64-18-5-0-0-0dbru" class="headerlink" title="我这里使用的版本是python3.6 64位 ,cx_Oracle-5.3-11g.win-amd64-py3.6-2和instantclient-basic-windows.x64-18.5.0.0.0dbru"></a><em>我这里使用的版本是python3.6 64位 ,cx_Oracle-5.3-11g.win-amd64-py3.6-2和instantclient-basic-windows.x64-18.5.0.0.0dbru</em></h4><h3 id="1-首先安装cx-Oracle包"><a href="#1-首先安装cx-Oracle包" class="headerlink" title="1. 首先安装cx_Oracle包"></a>1. 首先安装cx_Oracle包</h3><p><strong>尽量</strong>不要直接使用pip install cx_Oracle，这样默认安装的是最新版本的cx_Oracle,可能会出现以下错误</p>
-<h4 id="1-1-cx-Oracle-报错：cx-Oracle-DatabaseError-DPI-1050-Oracle-Client-library-must-be-at-version-11-2"><a href="#1-1-cx-Oracle-报错：cx-Oracle-DatabaseError-DPI-1050-Oracle-Client-library-must-be-at-version-11-2" class="headerlink" title="1.1 cx_Oracle 报错：cx_Oracle.DatabaseError: DPI-1050: Oracle Client library must be at version 11.2"></a>1.1 cx_Oracle 报错：cx_Oracle.DatabaseError: DPI-1050: Oracle Client library must be at version 11.2</h4><p><strong>解决方法：</strong>从 <a href="https://pypi.python.org/pypi/cx_Oracle/5.3" target="_blank" rel="noopener">https://pypi.python.org/pypi/cx_Oracle/5.3</a> 下载低版本cx_Oracle版本 可以下载cx_Oracle-5.3-11g.win-amd64-py3.6-2.exe ，然后直接安装</p>
-<h4 id="1-2-如果在安装cx-Oracle-5-3-11g-win-amd64-py3-6-2-exe-时提示Python-version-3-6-required-which-was-not-found-in-the-registry"><a href="#1-2-如果在安装cx-Oracle-5-3-11g-win-amd64-py3-6-2-exe-时提示Python-version-3-6-required-which-was-not-found-in-the-registry" class="headerlink" title="1.2 如果在安装cx_Oracle-5.3-11g.win-amd64-py3.6-2.exe 时提示Python version 3.6 required, which was not found in the registry"></a>1.2 如果在安装cx_Oracle-5.3-11g.win-amd64-py3.6-2.exe 时提示Python version 3.6 required, which was not found in the registry</h4><p>可以通过执行这个文件来解决</p>
-<p><a href="https://pan.baidu.com/s/1GcPK_I7ddSLZkM2sv7AHtA" target="_blank" rel="noopener"><img src="data:image/png;base64,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" alt="YPSuperKey Checked"> register.py</a>   链接: <a href="https://pan.baidu.com/s/1GcPK_I7ddSLZkM2sv7AHtA" target="_blank" rel="noopener"><img src="data:image/png;base64,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" alt="YPSuperKey Checked"><a href="https://pan.baidu.com/s/1GcPK_I7ddSLZkM2sv7AHtA" target="_blank" rel="noopener">https://pan.baidu.com/s/1GcPK_I7ddSLZkM2sv7AHtA</a></a>    提取码: qrwm </p>
-<p><img src="https://img2018.cnblogs.com/blog/1576802/201906/1576802-20190629130903718-1456262267.png" alt="img"><img src="file:///C:/Users/19111/AppData/Roaming/Typora/typora-user-images/1561784211589.png?lastModify=1561784800" alt="img"></p>
-<h3 id="2-下载instantclient-basic-windows-x64-11-2-0-4-0-zip，解压并配置环境变量（放到path中）"><a href="#2-下载instantclient-basic-windows-x64-11-2-0-4-0-zip，解压并配置环境变量（放到path中）" class="headerlink" title="2. 下载instantclient-basic-windows.x64-11.2.0.4.0.zip，解压并配置环境变量（放到path中）"></a>2. 下载instantclient-basic-windows.x64-11.2.0.4.0.zip，解压并配置环境变量（放到path中）</h3><p>下载地址：<a href="https://www.oracle.com/technetwork/cn/topics/winx64soft-101515-zhs.html" target="_blank" rel="noopener">https://www.oracle.com/technetwork/cn/topics/winx64soft-101515-zhs.html</a></p>
-<p>下载好后解压，并配置环境变量</p>
-<p><img src="https://img2018.cnblogs.com/blog/1576802/201906/1576802-20190629130924283-894337740.png" alt="img"><img src="file:///C:/Users/19111/AppData/Roaming/Typora/typora-user-images/1561783750001.png?lastModify=1561784800" alt="img"></p>
-<h3 id="3-将instantclient下所有-dll文件到python-Lib-site-packages-下（我这里的路径为C-Develop-Anaconda3-Lib-site-packages）"><a href="#3-将instantclient下所有-dll文件到python-Lib-site-packages-下（我这里的路径为C-Develop-Anaconda3-Lib-site-packages）" class="headerlink" title="3. 将instantclient下所有.dll文件到python\Lib\site-packages\下（我这里的路径为C:\Develop\Anaconda3\Lib\site-packages）"></a>3. 将instantclient下所有.dll文件到python\Lib\site-packages\下（我这里的路径为C:\Develop\Anaconda3\Lib\site-packages）</h3><h3 id="4-测试代码如下"><a href="#4-测试代码如下" class="headerlink" title="4. 测试代码如下"></a>4. 测试代码如下</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">`import` `cx_Oracle``conn``=``cx_Oracle.connect(``&apos;username&apos;``,``&apos;password&apos;``,``&apos;172.16.5.29:1521/ORCL&apos;``)``cursor``=``conn.cursor()` `print``(``&quot;连接成功！&quot;``)` `cursor.close()``conn.commit()``conn.close()`</span><br></pre></td></tr></table></figure>
-
-<p>当你看到“连接成功”的提示语句时，那么就恭喜你成功了用python连上了oracle数据库</p>
-<p><img src="https://img2018.cnblogs.com/blog/1576802/201906/1576802-20190629131256641-1684462501.png" alt="img"></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -203,446 +191,19 @@
 		</ul>
 	</div>
 
-      
+          
 
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/06/29/python3连接oracle数据库/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
+        </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
-    <article id="post-用tkinter写出you-get下载器界面，并用pyinstaller打包成exe文件" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
+  
+    </div></section>
+  
+
     
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/05/11/用tkinter写出you-get下载器界面，并用pyinstaller打包成exe文件/">用tkinter写出you-get下载器界面，并用pyinstaller打包成exe文件</a>
-    </h1>
-  
-
-        
-        <a href="/2019/05/11/用tkinter写出you-get下载器界面，并用pyinstaller打包成exe文件/" class="archive-article-date">
-  	<time datetime="2019-05-11T15:15:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-11</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="本文为原创文章，转载请标明出处"><a href="#本文为原创文章，转载请标明出处" class="headerlink" title="本文为原创文章，转载请标明出处"></a><strong>本文为原创文章，转载请标明出处</strong></h1><h2 id="一、you-get介绍"><a href="#一、you-get介绍" class="headerlink" title="一、you-get介绍"></a>一、you-get介绍</h2><p>you-get是一个基于 python<code>3</code> 的下载工具,使用 you-get 可以很轻松的下载到网络上的视频、图片及音乐。目前支持网易云音乐、AB 站、百度贴吧、斗鱼、熊猫、爱奇艺、凤凰视频、酷狗音乐、乐视、荔枝FM、秒拍、腾讯视频、优酷土豆、央视网、芒果TV 等<a href="https://you-get.org/#supported-sites" target="_blank" rel="noopener">以下</a>80多个站点。</p>
-<p><img src="https://img2018.cnblogs.com/blog/1576802/201905/1576802-20190511203214622-663914922.png" alt="img"></p>
-<p> 安装方法：</p>
-<p>pip install you-get</p>
-<h2 id="二、tkinter介绍"><a href="#二、tkinter介绍" class="headerlink" title="二、tkinter介绍"></a>二、tkinter介绍</h2><p>tkinter是python的标准GUI库，是Tk Interface的缩写。python提供了tkinter包，里面含有Tkinter接口。</p>
-<h2 id="三、pyinstaller介绍"><a href="#三、pyinstaller介绍" class="headerlink" title="三、pyinstaller介绍"></a>三、pyinstaller介绍</h2><p>pyinstaller是一个能将py文件转换成单个可执行文件的程序，操作系统支持Windows, Linux, Mac OS X, Solaris和AIX。并且很多包都支持开箱即用，不依赖环境。</p>
-<p>安装方法：</p>
-<p>pip install pyinstaller</p>
-<h2 id="四、代码及注释分析"><a href="#四、代码及注释分析" class="headerlink" title="四、代码及注释分析"></a>四、代码及注释分析</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">`from` `tkinter ``import` `*``from` `tkinter ``import` `filedialog``from` `tkinter.scrolledtext ``import` `ScrolledText``import` `subprocess as sub``import` `threading` `top ``=` `Tk()``top.title(``&quot;You-get视频下载器，made by @拼命三郎&quot;``)` `#获取屏幕尺寸以计算布局参数，使窗口居屏幕中央,其中width和height为界面宽和高``width``=``555``height``=``519``screenwidth ``=` `top.winfo_screenwidth() ``screenheight ``=` `top.winfo_screenheight()``alignstr ``=` `&apos;%dx%d+%d+%d&apos;` `%` `(width, height, (screenwidth``-``width)``/``2``, (screenheight``-``height)``/``2``)  ``top.geometry(alignstr)` `#阻止窗口调整大小``top.resizable(``0``,``0``)``#设置窗口图标``top.iconbitmap(``&apos;F:\Python\GUI界面\You-get - v0 -20190507\play_24px_1099805_easyicon.net.ico&apos;``)` `#框架布局``frame_root``=``Frame(top)``frame_left``=``Frame(frame_root)``frame_right``=``Frame(frame_root)` `frame_left.pack(side``=``LEFT)``frame_right.pack(side``=``RIGHT,anchor``=``N)``frame_root.pack()` `#输入视频链接``tip1``=` `Label(frame_left, text``=``&apos;请输入视频链接：         &apos;``,font ``=` `(``&apos;楷体&apos;``,``25``))``tip1.pack(padx``=``10``,anchor``=``W)``#视频链接输入框``input_url``=` `Entry(frame_left,bg``=``&apos;#F7F3EC&apos;``)``input_url.pack(ipadx``=``159``,ipady``=``8``,padx``=``20``,anchor``=``W)``#请选择保存位置``tip2``=``Label(frame_left, text``=``&apos;请选择保存位置：         &apos;``,font ``=` `(``&apos;楷体&apos;``,``25``))``tip2.pack(padx``=``10``,anchor``=``W)``#保存地址输入框``input_save_address``=` `Entry(frame_left,bg``=``&apos;#F7F3EC&apos;``)``input_save_address.pack(ipadx``=``159``,ipady``=``8``,padx``=``20``,anchor``=``W)` `#浏览本地文件夹，选择保存位置``def` `browse_folder():``    ``#浏览选择本地文件夹``    ``save_address ``=` `filedialog.askdirectory()``    ``#把获得路径，插入保存地址输入框（即插入input_save_address输入框）``    ``input_save_address.insert(``0``,save_address)` `#下载函数``def` `download():``    ``#从输入框获取视频链接``    ``url``=``input_url.get()``    ``# 从输入框获取保存地址``    ``save_address``=``input_save_address.get()``    ``cmd ``=` `f``&apos;you-get   -o &#123;save_address&#125;   &#123;url&#125;&apos;``    ``print``(cmd)` `#将cmd结果重定向到tkinterGUI，即将命令行的结果显示ScrolledText（滚动文本框）控件里``    ``p ``=` `sub.Popen(cmd, stdout``=``sub.PIPE, stderr``=``sub.PIPE)``    ``output, errors ``=` `p.communicate()``    ``output ``=` `output.decode(``&apos;UTF-8&apos;``)``    ``stext.insert(END, output)``    ``#使滚动文本框的滚动条始终保持在最底段``    ``stext.yview_moveto(``1``)` `#为避免在下载时tkinter界面卡死，创建线程函数``def` `thread_it(func, ``*``args):``    ``# 创建``    ``t ``=` `threading.Thread(target``=``func, args``=``args)``    ``# 守护 !!!``    ``t.setDaemon(``True``)``    ``# 启动``    ``t.start()` `# “浏览文件夹”按钮``browse_folder_button ``=` `Button(frame_right, text``=``&apos;浏览&apos;``,font ``=` `(``&apos;楷体&apos;``,``15``),command``=``lambda` `:thread_it(browse_folder))``browse_folder_button.pack(pady``=``110``,side``=``LEFT,anchor``=``W)``#新建空白标签，无实际作用，内容为空，为了让界面对称，更美观，可理解为“占位符”``Label(frame_right,text``=``&apos;     &apos;``).pack(pady``=``110``,side``=``LEFT,anchor``=``W)` `# “下载”按钮``download_button ``=` `Button(frame_left, text``=``&apos;下载&apos;``,font ``=` `(``&apos;楷体&apos;``,``15``),command``=``lambda` `:thread_it(download))``download_button.pack( padx``=``20``,pady``=``6``,anchor``=``W)` `# ScrolledText组件（滚动文本框）``stext ``=` `ScrolledText(frame_left, width``=``60``, height``=``23``, background``=``&apos;#F7F3EC&apos;``)``stext.pack(padx``=``20``,anchor``=``W)` `top.mainloop()`</span><br></pre></td></tr></table></figure>
-
-<p>　　</p>
-<p>　　<strong>注意：</strong></p>
-<p><img src="https://img2018.cnblogs.com/blog/1576802/201905/1576802-20190512004421120-1533009762.png" alt="img"></p>
-<p><strong>这里的ico要换成你自己本地的，如果不换，它就会报错说找不到文件。</strong></p>
-<p>如果你电脑里没有ico，可以到这里下载     <a href="https://www.easyicon.net/1099832-python_icon.html" target="_blank" rel="noopener">https://www.easyicon.net/1099832-python_icon.html</a></p>
-<p><img src="https://img2018.cnblogs.com/blog/1576802/201905/1576802-20190511195759881-710248834.png" alt="img"></p>
-<h2 id="五、运行实例截图"><a href="#五、运行实例截图" class="headerlink" title="五、运行实例截图"></a>五、运行实例截图</h2><p><img src="https://img2018.cnblogs.com/blog/1576802/201905/1576802-20190511194653465-55340464.png" alt="img"></p>
-<p>下载完成后，即会在你选择的路径产生视频。</p>
-<p><img src="https://img2018.cnblogs.com/blog/1576802/201905/1576802-20190511194742707-1082525725.png" alt="img"></p>
-<h2 id="六、用pyinstaller打包成exe"><a href="#六、用pyinstaller打包成exe" class="headerlink" title="六、用pyinstaller打包成exe"></a>六、用pyinstaller打包成exe</h2><p> 打包前先准备好自己的logo</p>
-<p><img src="https://img2018.cnblogs.com/blog/1576802/201905/1576802-20190511200039574-393638601.png" alt="img"></p>
-<p>到py文件所在路径按住shift键，点击鼠标右键选择“在此处打开Powershell 窗口（s）”</p>
-<p><img src="https://img2018.cnblogs.com/blog/1576802/201905/1576802-20190511200245261-416973680.png" alt="img"></p>
-<p>输入以下命令即可生成exe文件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pyinstaller  -F    -w    -i play_96px_1099805_easyicon.net.ico    Make_the_downloader_with_you-get_v1.py</span><br></pre></td></tr></table></figure>
-
-<p>执行成功后，会在路径下多出以下几个文件夹和文件</p>
-<p><img src="https://img2018.cnblogs.com/blog/1576802/201905/1576802-20190511200714947-1667389948.png" alt="img"></p>
-<p>其中exe文件就在dist目录里，打开即可运行。</p>
-<p><strong><img src="https://img2018.cnblogs.com/blog/1576802/201905/1576802-20190512004638490-1191180006.png" alt="img"></strong></p>
-<p>如果你看到这样的界面，那么说明你大功告成了……</p>
-<p><strong>如果你觉得我的分享还可以请点击推荐，分享给你的朋友让我们一起进步~</strong></p>
-<p><strong><img src="https://img2018.cnblogs.com/blog/1576802/201905/1576802-20190507125943911-1075644725.png" alt="img"></strong></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">tkinter, you-get, pyinstaller</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/05/11/用tkinter写出you-get下载器界面，并用pyinstaller打包成exe文件/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-分享一个网课答案查询软件" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/05/07/分享一个网课答案查询软件/">分享一个网课答案查询软件</a>
-    </h1>
-  
-
-        
-        <a href="/2019/05/07/分享一个网课答案查询软件/" class="archive-article-date">
-  	<time datetime="2019-05-07T05:05:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-07</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="今天来给大家分享一个我在网上找到的网课答案查询助手（实测好用）"><a href="#今天来给大家分享一个我在网上找到的网课答案查询助手（实测好用）" class="headerlink" title="今天来给大家分享一个我在网上找到的网课答案查询助手（实测好用）"></a><strong>今天来给大家分享一个我在网上找到的网课答案查询助手（实测好用）</strong></h2><p><img src="https://img2018.cnblogs.com/blog/1576802/201905/1576802-20190507124304968-764787438.png" alt="img"></p>
-<p>该工具完<strong>全免费无广告</strong>，单文件运行。大家下载解压后，双击打开即可。输入习题的题目，点查询，<strong>就会直接显示答案</strong>。博主亲测好用，<strong>支持智慧树答案查询和超星尔雅答案查询。</strong></p>
-<p><img src="https://img2018.cnblogs.com/blog/1576802/201905/1576802-20190507124202779-988972448.png" alt="img"></p>
-<p><img src="https://img2018.cnblogs.com/blog/1576802/201905/1576802-20190507124614901-175694828.png" alt="img"></p>
-<p>软件的原理其实很简单，就是调用了一些答案查询的API接口。如果接口失效，它也就不能用了。因此，<strong>趁着现在还能用，有需要的小伙伴，赶紧下载转存吧。</strong></p>
-<h2 id="下载链接："><a href="#下载链接：" class="headerlink" title="下载链接："></a><strong>下载链接：</strong></h2><h2 id="蓝奏云："><a href="#蓝奏云：" class="headerlink" title="蓝奏云："></a><strong>蓝奏云：</strong></h2><p><a href="https://www.lanzous.com/i3wq8ji" target="_blank" rel="noopener">https://www.lanzous.com/i3wq8ji</a><br><a href="https://pan.baidu.com/s/1VDtMQRkq8HquGUN1J74JQg" target="_blank" rel="noopener"><img src="data:image/png;base64,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" alt="YPSuperKey Unlocked"><a href="https://pan.baidu.com/s/1VDtMQRkq8HquGUN1J74JQg" target="_blank" rel="noopener">https://pan.baidu.com/s/1VDtMQRkq8HquGUN1J74JQg</a></a></p>
-<p><em>声明：我并不是本软件的创作者，只是转载分享给大家使用</em></p>
-<p>转载自：<a href="https://mp.weixin.qq.com/s/cC3hYI6mgvSh-LWNvzbEiA" target="_blank" rel="noopener">https://mp.weixin.qq.com/s/cC3hYI6mgvSh-LWNvzbEiA</a></p>
-<p> <strong>如果你觉得我的分享还可以请点击推荐，分享给你的朋友让我们一起进步~</strong></p>
-<p><strong><img src="https://img2018.cnblogs.com/blog/1576802/201905/1576802-20190507125943911-1075644725.png" alt="img"></strong></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">网课助手，实用小工具</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/05/07/分享一个网课答案查询软件/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-YOLOv3测试命令" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/05/04/YOLOv3测试命令/">YOLOv3测试命令</a>
-    </h1>
-  
-
-        
-        <a href="/2019/05/04/YOLOv3测试命令/" class="archive-article-date">
-  	<time datetime="2019-05-04T03:23:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-04</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="一、老规矩"><a href="#一、老规矩" class="headerlink" title="一、老规矩"></a>一、老规矩</h2><p>在darknet\build\darknet\x6下按住shift键，点击鼠标右键选择“在此处打开Powershell 窗口（s）”</p>
-<p><img src="https://img2018.cnblogs.com/blog/1576802/201905/1576802-20190504111607686-1909328594.png" alt="img"></p>
-<h2 id="二、测试图片命令："><a href="#二、测试图片命令：" class="headerlink" title="二、测试图片命令："></a>二、测试图片命令：</h2><p>.\darknet detect cfg\yolov3.cfg yolov3.weights data\dog.jpg</p>
-<p><img src="https://img2018.cnblogs.com/blog/1576802/201905/1576802-20190504100505739-1831992777.png" alt="img"></p>
-<h2 id><a href="#" class="headerlink" title=" "></a> </h2><h2 id="三、摄像头检测命令："><a href="#三、摄像头检测命令：" class="headerlink" title="三、摄像头检测命令："></a>三、摄像头检测命令：</h2><p>.\darknet.exe detector demo data\coco.data cfg\yolov3.cfg yolov3.weights</p>
-<p>调用结果如下</p>
-<p><img src="https://img2018.cnblogs.com/blog/1576802/201905/1576802-20190504112146210-1468747476.png" alt="img"></p>
-<p>或者指定摄像头设备号0： .\darknet.exe detector demo data\coco.data cfg\yolov3.cfg yolov3.weights -c 0</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">YOLOv3, 检测图片, 调用摄像头</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/05/04/YOLOv3测试命令/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-YOLOv3配置（win10-opencv3-40-cuda9-1-cudnn7-1-vs2015）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/05/03/YOLOv3配置（win10-opencv3-40-cuda9-1-cudnn7-1-vs2015）/">YOLOv3配置（win10+opencv3.40+cuda9.1+cudnn7.1+vs2015）</a>
-    </h1>
-  
-
-        
-        <a href="/2019/05/03/YOLOv3配置（win10-opencv3-40-cuda9-1-cudnn7-1-vs2015）/" class="archive-article-date">
-  	<time datetime="2019-05-03T13:17:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-03</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>最近心血来潮想学一下YOLOv3，于是就去网上看了YOLOv3在win10下的配置教程。在配置过程中塌坑无数，花了很多时间和精力，所以我想就此写一篇博客来介绍在在win10+vs2015的环境下如何配置YOLOv3。</p>
-<h2 id="1-安装VS（YOLOv3支持vs2012、2013、2015，其他版本需要下载工具集）"><a href="#1-安装VS（YOLOv3支持vs2012、2013、2015，其他版本需要下载工具集）" class="headerlink" title="1.安装VS（YOLOv3支持vs2012、2013、2015，其他版本需要下载工具集）"></a>1.安装VS（YOLOv3支持vs2012、2013、2015，其他版本需要下载工具集）</h2><p>尽量安装vs2015</p>
-<h2 id="2-安装CUDA"><a href="#2-安装CUDA" class="headerlink" title="2.安装CUDA"></a>2.安装CUDA</h2><p>2.1确定自己电脑对应的CUDA版本号</p>
-<p>2.1.1打开控制面板</p>
-<p><img src="https://img2018.cnblogs.com/blog/1576802/201905/1576802-20190503172705066-1834051199.png" alt="img"></p>
-<p>2.1.2进入NVIDIA控制面板</p>
-<p><img src="https://img2018.cnblogs.com/blog/1576802/201905/1576802-20190503173142708-808391851.png" alt="img"></p>
-<p>2.1.3选择系统信息</p>
-<p><img src="https://img2018.cnblogs.com/blog/1576802/201905/1576802-20190503173411091-253888724.png" alt="img"></p>
-<p>2.1.4点击组件，即可看到自己电脑适应的CUDA的版本号</p>
-<p><img src="https://img2018.cnblogs.com/blog/1576802/201905/1576802-20190503173649642-1964429565.png" alt="img"></p>
-<p> 2.2进入官网<a href="https://developer.nvidia.com/cuda-downloads" target="_blank" rel="noopener">https://developer.nvidia.com/cuda-downloads</a> ，按照自己的系统选择合适的版本。</p>
-<h2 id="3-安装CUDNN"><a href="#3-安装CUDNN" class="headerlink" title="3.安装CUDNN"></a>3.安装CUDNN</h2><p>CUDNN的版本需要与CUDA版本对应，下载的时候根据选定的CUDA版本进行选择即可。</p>
-<p>下载链接：  <a href="https://developer.nvidia.com/cudnn" target="_blank" rel="noopener">https://developer.nvidia.com/cudnn</a></p>
-<p>下载之后把对应文件夹的文件直接放入CUDA的对应文件夹就可以了</p>
-<p>即</p>
-<p>将D:\安装包\cudnn-9.1-windows10-x64-v7.1\cuda\bin\cudnn64_7.dll 复制到C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\bin</p>
-<p>将 D:\安装包\cudnn-9.1-windows10-x64-v7.1\cudacuda\ include\cudnn.h 复制到C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include</p>
-<p>将D:\安装包\cudnn-9.1-windows10-x64-v7.1\cudacuda\lib\x64\cudnn.lib复制到C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\lib\x64</p>
-<p><img src="https://img2018.cnblogs.com/blog/1576802/201905/1576802-20190503211921375-374995212.png" alt="img"></p>
-<p> 复制完之后要去检查一下cuda和cudnn的环境变量 ，务必要保证这些环境变量都有要不然最后在测试时会报错</p>
-<p><img src="https://img2018.cnblogs.com/blog/1576802/201905/1576802-20190504093659188-2133331452.png" alt="img"></p>
-<p><img src="https://img2018.cnblogs.com/blog/1576802/201905/1576802-20190504093758195-893073093.png" alt="img"></p>
-<h2 id="4-安装-OpenCV-（OpenCV-2-x-x-或者-OpenCV-lt-3-4-0）"><a href="#4-安装-OpenCV-（OpenCV-2-x-x-或者-OpenCV-lt-3-4-0）" class="headerlink" title="4. 安装 OpenCV （OpenCV 2.x.x 或者 OpenCV &lt;= 3.4.0）"></a>4. 安装 OpenCV （OpenCV 2.x.x 或者 OpenCV &lt;= 3.4.0）</h2><h3 id="（切记opencv的版本不能超过3-40，我当时就是因为粗心没注意到这点才折腾了很久）"><a href="#（切记opencv的版本不能超过3-40，我当时就是因为粗心没注意到这点才折腾了很久）" class="headerlink" title="（切记opencv的版本不能超过3.40，我当时就是因为粗心没注意到这点才折腾了很久）"></a>（切记opencv的版本不能超过3.40，我当时就是因为粗心没注意到这点才折腾了很久）</h3><p>下载地址：<a href="https://sourceforge.net/projects/opencvlibrary/files/opencvwin/3.4.0/opencv-3.4.0-vc14_vc15.exe/download" target="_blank" rel="noopener">https://sourceforge.net/projects/opencvlibrary/files/opencvwin/3.4.0/opencv-3.4.0-vc14_vc15.exe/download</a></p>
-<h3 id="如果访问不了，可以使用我的链接"><a href="#如果访问不了，可以使用我的链接" class="headerlink" title="如果访问不了，可以使用我的链接"></a>如果访问不了，可以使用我的链接</h3><p>   <strong>链接:</strong> <a href="https://pan.baidu.com/s/1yACjz1AiDWtkUzxZHqCH0w" target="_blank" rel="noopener">https://pan.baidu.com/s/1yACjz1AiDWtkUzxZHqCH0w</a> <strong>提取码:</strong> scxv </p>
-<p>接下来将opencv配置到环境变量</p>
-<p><img src="https://img2018.cnblogs.com/blog/1576802/201905/1576802-20190503180112443-1637156129.png" alt="img"></p>
-<h2 id="5-下载darknet"><a href="#5-下载darknet" class="headerlink" title="5. 下载darknet"></a>5. 下载darknet</h2><p>下载地址：<a href="https://github.com/AlexeyAB/darknet" target="_blank" rel="noopener">https://github.com/AlexeyAB/darknet</a></p>
-<p>（如果会使用git，则直接git clone  <a href="https://github.com/AlexeyAB/darknet" target="_blank" rel="noopener">https://github.com/AlexeyAB/darknet</a>) </p>
-<p> 5.1修改darknet.vcxproj文件</p>
-<p>进入darknet\build\darknet目录，用记事本打开darknet.vcxproj，将所有CUDA 10.0修改为自己对应的CUDA版本，本篇使用CUDA 9.1，故改为9.1。（共有两处需要修改）<br>5.2打开darknet.sln</p>
-<p>5.2.1将项目修改为Release x64</p>
-<p><img src="https://img2018.cnblogs.com/blog/1576802/201905/1576802-20190503181157383-1970313374.png" alt="img"></p>
-<p>5.2.2配置包含目录 + 库目录 + 链接器</p>
-<p>包含目录：在darknet项目上点击鼠标右键-&gt;属性，弹出如下界面：然后VC++目录–&gt;包含目录–&gt;编辑</p>
-<p>添加的目录：…\opencv\build\include（…代表opencv的安装路径，下文同理）</p>
-<p>…\opencv\build\include\opencv</p>
-<p>…\opencv\build\include\opencv2</p>
-<p><img src="https://img2018.cnblogs.com/blog/1576802/201905/1576802-20190503181430638-2059777769.png" alt="img"></p>
-<p>库目录：方法与包含目录类似，添加的目录为：…\opencv\build\x64\vc14\lib</p>
-<p><img src="https://img2018.cnblogs.com/blog/1576802/201905/1576802-20190503181518180-1827206277.png" alt="img"></p>
-<p>链接器：添加目录…\opencv\build\x64\vc14\lib下库的名字：opencv_world340.lib</p>
-<p> <img src="https://img2018.cnblogs.com/blog/1576802/201905/1576802-20190503181735318-2029250684.png" alt="img"></p>
-<p>5.2.3右键darknet，选择属性，进入CUDA C/C++中的Code Generation，删掉compute_75,sm_75（此步极为关键，要不然必出错）</p>
-<p><img src="https://img2018.cnblogs.com/blog/1576802/201905/1576802-20190503181904067-258639938.png" alt="img"></p>
-<p>5.3右键darknet，选择生成</p>
-<p>编译成功,会在darknet\build\darknet\x64下得到darknet.exe</p>
-<p><img src="https://img2018.cnblogs.com/blog/1576802/201905/1576802-20190503211224379-369282956.png" alt="img"></p>
-<p>当你看到darknet.exe时，那么就恭喜你配置成功过了！</p>
-<p><img src="https://img2018.cnblogs.com/blog/1576802/201905/1576802-20190503211536344-750803172.png" alt="img"></p>
-<h2 id="6-测试"><a href="#6-测试" class="headerlink" title="6.测试"></a>6.测试</h2><p>6.1下载yolov3.weights</p>
-<p>官网：<a href="https://pjreddie.com/media/files/yolov3.weights" target="_blank" rel="noopener">https://pjreddie.com/media/files/yolov3.weights</a></p>
-<p>下载速度有点慢</p>
-<p>也可以用我的链接  链接: <a href="https://pan.baidu.com/s/1FSkXMGqCeqDFpeDxJzb3sA" target="_blank" rel="noopener">https://pan.baidu.com/s/1FSkXMGqCeqDFpeDxJzb3sA</a> 提取码: 1ajt</p>
-<p>下载完成后把它放到darknet\build\darknet\x64下</p>
-<p>6.2测试</p>
-<p>在darknet\build\darknet\x6下按住shift键，点击鼠标右键选择“在此处打开Powershell 窗口（s）”</p>
-<p><img src="https://img2018.cnblogs.com/blog/1576802/201905/1576802-20190504100330194-1735137723.png" alt="img"></p>
-<p>在命令行输入 .\darknet detect cfg/yolov3.cfg yolov3.weights data/dog.jpg</p>
-<p><img src="https://img2018.cnblogs.com/blog/1576802/201905/1576802-20190504100505739-1831992777.png" alt="img"></p>
-<p>如果看到以下结果，说明你成功的配好了YOLOv3</p>
-<p><img src="https://img2018.cnblogs.com/blog/1576802/201905/1576802-20190504100631456-557723802.png" alt="img"></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Object Detection</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/05/03/YOLOv3配置（win10-opencv3-40-cuda9-1-cudnn7-1-vs2015）/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-  
 
 
           </div>
@@ -664,10 +225,10 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
+		isHome: false,
 		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
